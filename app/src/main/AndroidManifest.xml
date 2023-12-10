@@ -13,6 +13,17 @@
         android:theme="@style/Theme.GormetHealth"
         tools:targetApi="31">
         <activity
+            android:name=".discoverpage"
+            android:exported="false"
+            android:label="@string/title_activity_discoverpage"
+            android:theme="@style/Theme.GormetHealth" />
+        <activity
+            android:name=".goalspage"
+            android:exported="false" />
+        <activity
+            android:name=".recipespage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
