@@ -6,25 +6,120 @@
     android:layout_height="match_parent"
     tools:context=".recipespage">
 
+
     <ImageView
         android:id="@+id/topImage"
         android:layout_width="414dp"
         android:layout_height="201dp"
         android:src="@drawable/recipepage"
-        tools:layout_editor_absoluteX="-2dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-12dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="408dp"
-        android:layout_height="83dp"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
         android:gravity="left"
         android:text="Today's Recipes"
-        android:textColor="#0B0000"
+        android:textColor="#EC0606"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topImage" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="403dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="11dp"
+        android:gravity="left"
+        android:text="Breakfast"
+        android:textColor="#171717"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="408dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Ingredients:  2 large eggs 1/4 cup diced bell peppers (red, green, or yellow) 1/4 cup diced tomatoes 1/4 cup diced onions 1/4 cup chopped spinach Salt and pepper to taste 1 teaspoon olive oil (for cooking) Optional: 1/4 cup reduced-fat shredded cheese (e.g., feta or mozzarella)"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="407dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="In a bowl, beat the eggs until well mixed. Heat olive oil in a non-stick skillet over medium heat. Add diced onions and cook until translucent. Add bell peppers and tomatoes to the skillet. Cook for a few minutes until the vegetables are slightly tender. Add chopped spinach to the skillet and cook until wilted. Pour the beaten eggs over the vegetables in the skillet. Allow the eggs to set slightly, and then gently lift the edges with a spatula to let the uncooked eggs flow underneath. When the omelette is almost set but still slightly runny on top, sprinkle with salt and pepper to taste. If desired, add the shredded cheese on one side of the omelette. Carefully fold the omelette in half with the spatula and cook for an additional minute or until the cheese is melted, and the eggs are fully cooked."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="405dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="200dp"
+        android:gravity="left"
+        android:text="Instructions"
+        android:textColor="#171717"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topImage" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/lunchrecipes"
+        android:layout_width="111dp"
+        android:layout_height="49dp"
+        android:text="Lunch"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:text="Meal completed"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/topImage"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

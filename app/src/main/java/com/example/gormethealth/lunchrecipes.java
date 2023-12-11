@@ -7,22 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class recipespage extends AppCompatActivity {
+public class lunchrecipes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipespage);
+        setContentView(R.layout.activity_lunchrecipes);
 
-        Button lunchrecipes = findViewById(R.id.lunchrecipes);
+        Button dinnerpage = findViewById(R.id.dinnerpage);
 
-        lunchrecipes.setOnClickListener(new View.OnClickListener() {
+        dinnerpage.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(recipespage.this, lunchrecipes.class);
+                Intent intent = new Intent(lunchrecipes.this, dinnerpage.class);
                 startActivity(intent);
             }
         });
+
+
     }
 }
