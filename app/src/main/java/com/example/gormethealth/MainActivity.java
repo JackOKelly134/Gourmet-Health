@@ -3,17 +3,21 @@ package com.example.gormethealth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.hardware.SensorEvent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private counterpage stepCounter;
+    private TextView stepCountTextView;
     //ListView recipes_list;
     //private Build.VERSION_CODES android;
 
@@ -21,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
 
         Button recipespage = findViewById(R.id.recipespage);
         Button goalspage = findViewById(R.id.goalspage);
@@ -52,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 
 }

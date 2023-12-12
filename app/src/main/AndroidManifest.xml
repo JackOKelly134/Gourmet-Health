@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="true"/>
+    <uses-feature android:name="android.hardware.sensor.stepdetector" android:required="true"/>
+    <uses-feature android:name="android.permission.ACTIVITY_RECOGNATION"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GormetHealth"
         tools:targetApi="31">
+        <activity
+            android:name=".StepCounter"
+            android:exported="false"
+            android:label="@string/title_activity_step_counter"
+            android:theme="@style/Theme.GormetHealth" />
         <activity
             android:name=".counterpage"
             android:exported="false"

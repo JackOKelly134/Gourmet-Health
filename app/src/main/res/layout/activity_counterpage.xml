@@ -1,33 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".counterpage">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_counterpage" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:padding="20dp"
+        android:text="Step Counter"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/stepCountTargetTextView"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="Today's Step Goal : 2000"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="130dp"
+        android:layout_height="187dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle"
+        android:padding="10dp"
+        android:progressDrawable="@drawable/custom_progress"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="96dp"
+            android:src="@drawable/steps"/>
+
+        <TextView
+            android:id="@+id/stepCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Steps: 0"
+            android:padding="20dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="96dp"
+            android:src="@drawable/distancepin"/>
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Distance: 0"
+            android:padding="20dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="96dp"
+            android:src="@drawable/stopwatch"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Time: 0"
+            android:padding="20dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pausebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onPauseButtonclicked"
+        android:padding="20dp"
+        android:text="Pause" />
+
+
+</LinearLayout>

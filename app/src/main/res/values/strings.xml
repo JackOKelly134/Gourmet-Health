@@ -47,4 +47,5 @@
     <string name="title_activity_challengepage">challengepage</string>
     <string name="title_activity_dinnerpage">dinnerpage</string>
     <string name="title_activity_counterpage">counterpage</string>
+    <string name="title_activity_step_counter">StepCounter</string>
 </resources>
