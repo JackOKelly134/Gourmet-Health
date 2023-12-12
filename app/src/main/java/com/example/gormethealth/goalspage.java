@@ -18,9 +18,9 @@ public class goalspage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goalspage);
 
-        Button backbutton = findViewById(R.id.backbutton);
+        Button homebutton = findViewById(R.id.backbutton);
 
-        backbutton.setOnClickListener(new View.OnClickListener() {
+        homebutton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
