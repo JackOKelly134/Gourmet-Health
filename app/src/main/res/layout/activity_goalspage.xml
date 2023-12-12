@@ -68,7 +68,9 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="246dp"
+        android:layout_marginBottom="14dp"
         android:text="Not Very Active"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,13 +139,19 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="8dp"
         android:text="How much excersise do you get a week?"
         android:textColor="#171717"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="475dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton3"
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/checkBox4"

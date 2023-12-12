@@ -30,7 +30,7 @@ public class discoverpage extends AppCompatActivity {
         });
 
 
-/*
+
         counterpage.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -39,7 +39,7 @@ public class discoverpage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        */
+
 
     }
 }

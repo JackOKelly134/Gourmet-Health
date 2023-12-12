@@ -46,4 +46,5 @@
     <string name="title_activity_dispages">dispages</string>
     <string name="title_activity_challengepage">challengepage</string>
     <string name="title_activity_dinnerpage">dinnerpage</string>
+    <string name="title_activity_counterpage">counterpage</string>
 </resources>
