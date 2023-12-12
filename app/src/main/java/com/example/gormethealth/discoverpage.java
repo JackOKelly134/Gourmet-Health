@@ -18,6 +18,7 @@ public class discoverpage extends AppCompatActivity {
 
         Button challengepage = findViewById(R.id.challengepage);
         Button counterpage = findViewById(R.id.counterpage);
+        Button homebutton = findViewById(R.id.homebutton);
 
 
         challengepage.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,16 @@ public class discoverpage extends AppCompatActivity {
             }
         });
 
+
+
+        homebutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(discoverpage.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
