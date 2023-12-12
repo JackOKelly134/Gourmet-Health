@@ -19,6 +19,7 @@ public class discoverpage extends AppCompatActivity {
         Button challengepage = findViewById(R.id.challengepage);
         Button counterpage = findViewById(R.id.counterpage);
 
+
         challengepage.setOnClickListener(new View.OnClickListener() {
 
             @Override

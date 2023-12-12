@@ -11,18 +11,29 @@
         android:id="@+id/challengepage"
         android:layout_width="151dp"
         android:layout_height="62dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="26dp"
         android:text="Daily challenge"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintBottom_toTopOf="@+id/counterpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/counterpage"
         android:layout_width="145dp"
         android:layout_height="61dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="257dp"
         android:text="Step Counter"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="413dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/challengepage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

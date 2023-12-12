@@ -18,24 +18,187 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
+    <EditText
+        android:id="@+id/goals"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="48dp"
+        android:hint="Enter in your goal"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="411dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="48dp"
+        android:hint="Current Weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goals"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/activelevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="365dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="318dp"
-        android:text="CheckBox"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="275dp"
+        android:text="Activity Level"
+        android:textColor="#171717"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="151dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="246dp"
+        android:text="Not Very Active"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activelevel" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="192dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="209dp"
+        android:text="Active"
+        app:layout_constraintBottom_toTopOf="@+id/savebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="24dp"
+        android:text="Go back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="104dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="24dp"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="425dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:background="#D237C83D"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Goals"
+        android:textColor="#0B0000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/example"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Please enter" />
+        android:text="How much excersise do you get a week?"
+        android:textColor="#171717"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="475dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:text="2 - 3"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginBottom="93dp"
+        android:text="4 - 5"
+        app:layout_constraintBottom_toTopOf="@+id/backbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="336dp"
+        android:layout_marginBottom="38dp"
+        android:text="5 - 6"
+        app:layout_constraintBottom_toTopOf="@+id/backbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="245dp"
+        android:layout_marginBottom="32dp"
+        android:text="7+"
+        app:layout_constraintBottom_toTopOf="@+id/backbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/checkBox6"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
