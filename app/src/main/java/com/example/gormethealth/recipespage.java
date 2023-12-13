@@ -16,6 +16,7 @@ public class recipespage extends AppCompatActivity {
 
         Button lunchrecipes = findViewById(R.id.lunchrecipes);
 
+        // Set up an onClickListener for the "lunch" button
         lunchrecipes.setOnClickListener(new View.OnClickListener() {
 
             @Override

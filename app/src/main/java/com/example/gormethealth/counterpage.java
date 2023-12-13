@@ -27,12 +27,18 @@ import com.example.gormethealth.databinding.ActivityCounterpageBinding;
 
 import java.util.Locale;
 
+
+//Reference: This video help me create a step sensor
+//YouTube: Learn with Deeksha
+//https://www.youtube.com/watch?v=l3yBm96qQuI
 public class counterpage extends AppCompatActivity implements SensorEventListener  {
 
+    //UI elements
     private TextView stepCountTextView;
     private TextView distanceTextView;
     private TextView timeTextView;
     private Button pauseButton;
+    //Sensor related
     private SensorManager sensorManger;
     private Sensor stepCounterSensor;
     private int stepCount = 0;
@@ -40,11 +46,11 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
     private ProgressBar progressBar;
     private boolean isPause = false;
     private long timePause = 0;
-    private float stepLengthInMeters = 0.762f;
+    private float stepLengthInMeters = 0.762f; //used  for the step counter
     private long startTime;
-    private int steoCountTagget = 2000;
+    private int steoCountTagget = 2000; //used  for the step counter
     private TextView stepCountTargetTextView;
-    private Handler timerHandler = new Handler();
+    private Handler timerHandler = new Handler(); //used to the timer
     private Runnable timerRunnable = new Runnable() {
         @Override
         public void run() {
@@ -61,6 +67,7 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
     protected void onStop(){
         super.onStop();
 
+        //Unregister the sensor listener and removes timer callback
         if(stepCounterSensor != null) {
             sensorManger.unregisterListener( this);
             timerHandler.removeCallbacks(timerRunnable);
@@ -70,6 +77,7 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
     protected void onResume(){
         super.onResume();
 
+        //Register the sensor listener and starts the timer
         if(stepCounterSensor != null) {
             sensorManger.registerListener(this, stepCounterSensor, sensorManger.SENSOR_DELAY_NORMAL);
 
@@ -82,6 +90,7 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counterpage);
 
+        //Initialize UI elements
         stepCountTextView = findViewById(R.id.stepCountTextView);
         distanceTextView = findViewById(R.id.distanceTextView);
         timeTextView = findViewById(R.id.timeTextView);
@@ -89,8 +98,10 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
         stepCountTargetTextView = findViewById(R.id.stepCountTargetTextView);
         progressBar = findViewById(R.id.progressbar);
 
+        //set the start time for the timer
         startTime = System.currentTimeMillis();
 
+        //Initialize sensor-related variables
         sensorManger = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         stepCounterSensor =sensorManger.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
 
@@ -114,14 +125,17 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
         SensorEvent sensorEvent = null;
         if (sensorEvent.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
 
+            //Update the step counter
             stepCount = (int) sensorEvent.values[0];
             stepCountTextView.setText("Step Count " + stepCount);
             progressBar.setProgress(stepCount);
 
+            //check the step goal has being reached
             if (stepCount>= steoCountTagget){
                 stepCountTextView.setText("Daily Step Goal Achieved");
             }
 
+            //Caluate and display the distance
             float distanceInKm = stepCount * stepLengthInMeters / 1000;
             distanceTextView.setText(String.format(Locale.getDefault(), "Distance:%.2f km", distanceInKm));
         }
@@ -135,12 +149,14 @@ public class counterpage extends AppCompatActivity implements SensorEventListene
     public void onPauseButtonclicked(View view){
         if (isPause) {
 
+            //If paused resume
             isPause = false;
             pauseButton.setText("Pause");
             startTime= System.currentTimeMillis()-timePause;
             timerHandler.postDelayed(timerRunnable, 0);
         }else{
 
+            //if not paused start the timer
             isPause = true;
             pauseButton.setText("Resume");
 
